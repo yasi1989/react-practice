@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const Lesson5_3 = () => {
   const [count1, setCount1] = useState(0);
@@ -10,7 +10,7 @@ const Lesson5_3 = () => {
     return count * 2;
   };
 
-  const doubleCount = double(count2);
+  const doubleCount = useMemo(() => double(count2), [count2]) ;
 
   return (
     <div>
