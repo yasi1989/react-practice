@@ -12,6 +12,7 @@ import Lesson4_1 from "./lessons/Lesson4/Lesson4_1/Lesson4_1";
 import Lesson5_1 from "./lessons/Lesson5/Lesson5_1/Lesson5_1";
 import Lesson5_2 from "./lessons/Lesson5/Lesson5_2/Lesson5_2";
 import Lesson5_3 from "./lessons/Lesson5/Lesson5_3/Lesson5_3";
+import Lesson6_1 from "./lessons/Lesson6/Lesson6_1/Lesson6_1";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
       </AuthProvider> */}
       {/* <Lesson5_1 /> */}
       {/* <Lesson5_2 /> */}
-      <Lesson5_3 />
+      {/* <Lesson5_3 /> */}
+      <Lesson6_1 />
       {/* ... */}
     </div>
   );
