@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import IndexPage from "./IndexPage";
 import ArtistPage from "./ArtistPage";
 import Layout from "./Layout";
 
 const Router = () => {
   const [page, setPage] = useState("/");
+  const [isPending, startTransition] = useTransition();
 
   function navigate(url: string) {
-    setPage(url);
+    startTransition(() => {
+      setPage(url);
+    });
   }
 
   let content;
@@ -23,7 +26,7 @@ const Router = () => {
       />
     );
   }
-  return <Layout>{content}</Layout>;
+  return <Layout isPending={isPending}>{content}</Layout>;
 };
 
 export default Router;

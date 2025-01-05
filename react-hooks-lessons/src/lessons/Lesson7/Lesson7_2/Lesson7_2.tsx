@@ -2,7 +2,7 @@ import Issues from "./Issues";
 import { usePageNumber } from "./hooks/usePageNumber";
 
 const Lesson7_2 = () => {
-  const { page, incrementPage, decrementPage } = usePageNumber();
+  const { page, isPending, incrementPage, decrementPage } = usePageNumber();
 
   return (
     <div>
@@ -18,6 +18,7 @@ const Lesson7_2 = () => {
       >
         Next
       </button>
+      <div>{isPending && "Loading..."}</div>
       <Issues page={page} />
     </div>
   );

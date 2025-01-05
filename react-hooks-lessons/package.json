@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.0-canary-6db7f4209-20231021",
-    "react-dom": "^18.3.0-canary-6db7f4209-20231021"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "swr": "^2.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.56",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react-swc": "^3.5.0",
