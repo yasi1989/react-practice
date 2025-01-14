@@ -1,10 +1,10 @@
 import "./App.css";
-import UseOptimisticSample from "./hooks/useOptimistics/page";
+import UseTransitionSample from "./hooks/useTransition/page";
 
 function App() {
   return (
     <>
-      <UseOptimisticSample />
+      <UseTransitionSample />
     </>
   );
 }

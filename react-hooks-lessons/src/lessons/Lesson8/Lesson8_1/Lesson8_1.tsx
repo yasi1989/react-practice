@@ -1,8 +1,9 @@
-import { Suspense, useState } from "react";
+import { Suspense, useDeferredValue, useState } from "react";
 import SearchResult from "./SearchResult";
 
 const Lesson8_1 = () => {
   const [query, setQuery] = useState("");
+  const defferdQuery = useDeferredValue(query);
 
   return (
     <div>
@@ -12,10 +13,12 @@ const Lesson8_1 = () => {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className={`border-2 px-3 py-3 rounded-md`}
+          className={`border-2 px-3 py-3 rounded-md ${
+            query !== defferdQuery ? "opacity-20" : "opacity-100"
+          }`}
         />
         <Suspense fallback={<h2>Loading...</h2>}>
-          <SearchResult query={query} />
+          <SearchResult query={defferdQuery} />
         </Suspense>
       </label>
     </div>
